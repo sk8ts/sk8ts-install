@@ -1,0 +1,45 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "ec2:*",
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+          "StringEquals": {
+              "ec2:Region": "us-west-2"
+           }
+       }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "elasticloadbalancing:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "cloudwatch:*",
+      "Resource": "*",
+      "Condition": {
+          "StringEquals": {
+              "ec2:Region": "us-west-2"
+           }   
+       }  
+    },
+    {
+      "Effect": "Allow",
+      "Action": "autoscaling:*",
+      "Resource": "*",
+      "Condition": {
+          "StringEquals": {
+              "ec2:Region": "us-west-2"
+           }   
+       }  
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:*",
+      "Resource": "*"
+    }
+  ]
+}
