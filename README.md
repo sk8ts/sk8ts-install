@@ -116,8 +116,11 @@ sk8ts  sk8ts-venv
 
 ## Step 5: Deploy Kubernetes
 
+TBD (but all the ansible code is there)
 
 ## Step 6: Deploy Application
+
+ssh into the util0 node where kubectl has been properly configured.
 
 ```
 ubuntu@util0:~$ kubectl run my-nginx --image=nginx --replicas=2 --port=80
